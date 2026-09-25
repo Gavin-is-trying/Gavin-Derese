@@ -54,5 +54,5 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         with:
-          model: openrouter/openrouter/auto
+          model: openrouter/qwen/qwen3-coder
           mentions: /oc
