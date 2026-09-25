@@ -1,0 +1,58 @@
+name: OpenCode
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  plan:
+    if: github.event.issue.pull_request == null && startsWith(github.event.comment.body, '/oc plan')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Plan with OpenCode
+        uses: anomalyco/opencode/github@latest
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        with:
+          model: openrouter/anthropic/claude-sonnet-4.5
+          agent: plan
+          mentions: /oc
+          prompt: |
+            Act as a technical manager. Analyze the issue, inspect the repository,
+            and produce an implementation plan with affected files, risks, tests,
+            and acceptance criteria. Do not modify files or open a pull request.
+
+  implement:
+    if: >-
+      github.event.issue.pull_request == null &&
+      contains(github.event.comment.body, '/oc') &&
+      !startsWith(github.event.comment.body, '/oc plan')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Implement with OpenCode
+        uses: anomalyco/opencode/github@latest
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        with:
+          model: openrouter/qwen/qwen3-coder-480b-a35b-instruct
+          mentions: /oc
