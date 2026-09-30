@@ -1,24 +1,19 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        retro: {
-          orange: '#FF8C42',
-          yellow: '#FFD23F',
-          teal: '#3BCEAC',
-          green: '#52B788',
-          pink: '#FF6B9D'
-        }
+        paper: '#f4f0e8',
+        ink: '#1e2926',
+        moss: '#354b40',
+        oxblood: '#6f332c',
+        gold: '#b08a46',
       },
-      fontFamily: {
-        display: ['Fredoka', 'Comic Sans MS', 'sans-serif'],
-        body: ['Quicksand', 'sans-serif']
-      }
     },
   },
   plugins: [],

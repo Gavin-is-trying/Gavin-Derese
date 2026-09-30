@@ -1,25 +1,14 @@
-'use client'
-
 export default function Footer() {
   return (
-    <footer className="py-8 px-4 bg-retro-pink text-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-lg mb-4">
-          © {new Date().getFullYear()} Gavin Derese by Gavin Derese
-        </p>
-        <p className="mb-4">
-          Exploring the intersection of gamification and personal growth
-        </p>
-        <div className="flex justify-center space-x-6">
-          <a href="#" className="hover:text-retro-yellow transition-colors">
-            GitHub
-          </a>
-          <a href="#" className="hover:text-retro-yellow transition-colors">
-            Twitter
-          </a>
-          <a href="#" className="hover:text-retro-yellow transition-colors">
-            LinkedIn
-          </a>
+    <footer id="notes" className="bg-[#171f1d] px-6 py-12 text-[#d6d8d0] md:px-12 lg:px-16">
+      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 md:flex-row md:items-end">
+        <div>
+          <p className="font-editorial text-2xl text-paper">Gavin Derese</p>
+          <p className="mt-3 max-w-sm text-sm leading-6 text-[#aeb8af]">Notes toward a more attentive, capable, and deliberately lived life.</p>
+        </div>
+        <div className="flex flex-col gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#aeb8af] md:items-end">
+          <a href="mailto:hello@gavinderese.com" className="transition-colors hover:text-[#d9b877]">hello@gavinderese.com</a>
+          <p>© {new Date().getFullYear()} Gavin Derese</p>
         </div>
       </div>
     </footer>

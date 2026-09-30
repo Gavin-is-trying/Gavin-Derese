@@ -29,11 +29,14 @@ npm run build
 npm start
 ```
 
+### Deployment
+Deploy through Vercel and configure `gavinderese.com` as the production domain in the Vercel project settings.
+
 ## 🎨 Design Philosophy
 Inspired by 1970s Dr. Seuss animated cartoons with a modern gamification twist.
 
 ## 🌐 Live Site
-Coming soon!
+https://gavinderese.com
 
 ## 🛠️ Technologies Used
 - Next.js 14.2

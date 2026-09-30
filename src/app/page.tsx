@@ -1,15 +1,12 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import Hero from '../components/Hero'
-import GameifySection from '../components/GameifySection'
 import CharacterPreview from '../components/CharacterPreview'
-import SkillsGrid from '../components/SkillsGrid'
 import Footer from '../components/Footer'
+import GameifySection from '../components/GameifySection'
+import Hero from '../components/Hero'
+import SkillsGrid from '../components/SkillsGrid'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-retro-yellow to-retro-teal">
+    <main className="paper-grain overflow-hidden">
       <Hero />
       <GameifySection />
       <CharacterPreview />

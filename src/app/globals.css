@@ -2,37 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --paper: #f4f0e8;
+  --paper-deep: #e8e0d2;
+  --ink: #1e2926;
+  --muted: #66706b;
+  --line: #c8c0b2;
+  --moss: #354b40;
+  --moss-light: #dbe1d6;
+  --oxblood: #6f332c;
+  --gold: #b08a46;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #f0f9ff;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fredoka', 'Comic Sans MS', sans-serif;
+::selection {
+  background: #c8d1c1;
+  color: var(--ink);
+}
+
+.font-editorial {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.paper-grain {
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(30, 41, 38, 0.08) 0.7px, transparent 0.7px);
+  background-size: 8px 8px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--oxblood);
+  font-size: 0.7rem;
   font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
-.retro-card {
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.eyebrow::before {
+  width: 1.8rem;
+  height: 1px;
+  background: currentColor;
+  content: '';
 }
 
-.retro-card:hover {
-  transform: translateY(-5px);
+.rule {
+  border-color: var(--line);
 }
 
-.retro-button {
-  background: linear-gradient(45deg, #FF8C42, #FFD23F);
-  border-radius: 50px;
-  padding: 12px 24px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
+.brain-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.retro-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 140, 66, 0.4);
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

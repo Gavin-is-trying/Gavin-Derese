@@ -4,51 +4,23 @@ import { motion } from 'framer-motion'
 
 export default function CharacterPreview() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12 text-retro-orange"
-        >
-          Meet Your Sasquatch Companion
-        </motion.h2>
-        
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-1"
-          >
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center text-gray-500">
-              Sasquatch Character Illustration
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-1"
-          >
-            <h3 className="text-3xl font-bold mb-4 text-retro-pink">Your 1970s Dr. Seuss-Style Guide</h3>
-            <p className="text-lg mb-4 text-gray-700">
-              Inspired by the whimsical characters of early 1970s Dr. Seuss animations, your Sasquatch companion 
-              will guide you through your gamified life journey with playful animations and encouraging messages.
-            </p>
-            <p className="text-lg mb-4 text-gray-700">
-              This character will represent your progress, celebrate your victories, and gently nudge you toward 
-              your goals with charming 1970s aesthetic and vibrant colors.
-            </p>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Playful animations for different achievements</li>
-              <li>Custom reactions to your progress</li>
-              <li>Whimsical interactions inspired by classic cartoons</li>
-              <li>Vibrant color scheme reflecting the 1970s aesthetic</li>
-            </ul>
-          </motion.div>
+    <section className="px-6 py-24 md:px-12 lg:px-16">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-24">
+        <motion.div initial={{ opacity: 0, x: -18 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="relative min-h-[390px] overflow-hidden bg-moss p-8 text-paper sm:p-12">
+          <div className="absolute inset-5 border border-[#93a093]/40" />
+          <p className="relative text-xs font-bold uppercase tracking-[0.18em] text-[#d7ddd2]">Field note / 01</p>
+          <p className="font-editorial relative mt-24 max-w-sm text-4xl leading-tight tracking-[-0.03em]">The brain is not a machine to perfect.</p>
+          <p className="relative mt-6 max-w-xs text-sm leading-6 text-[#d7ddd2]">It is a landscape to know: layered, adaptive, and always in conversation with its environment.</p>
+          <div className="absolute bottom-9 right-9 h-16 w-16 rounded-full border border-[#d7ddd2]/70" />
+          <div className="absolute bottom-[5.5rem] right-[5.5rem] h-8 w-8 rounded-full border border-[#d7ddd2]/50" />
+        </motion.div>
+        <div className="flex flex-col justify-center">
+          <p className="eyebrow">The inner instrument</p>
+          <h2 className="font-editorial mt-7 max-w-2xl text-4xl leading-tight tracking-[-0.035em] sm:text-5xl">Thought, feeling, and habit are all part of the same living system.</h2>
+          <div className="mt-10 grid gap-7 border-t rule pt-7 sm:grid-cols-2">
+            <div><p className="text-xs font-bold uppercase tracking-[0.15em] text-oxblood">Attention</p><p className="mt-3 leading-7 text-[#5f6862]">Protect space for the things that ask more of you than a glance.</p></div>
+            <div><p className="text-xs font-bold uppercase tracking-[0.15em] text-oxblood">Memory</p><p className="mt-3 leading-7 text-[#5f6862]">Use small records to give your efforts a history worth returning to.</p></div>
+          </div>
         </div>
       </div>
     </section>
