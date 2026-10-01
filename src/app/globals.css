@@ -2,56 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --paper: #fff;
-  --ink: #000;
-  --line: #000;
+@layer base {
+  body {
+    margin: 0;
+    background: #fff;
+    color: #000;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #000;
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+  }
+
+  section[id] {
+    scroll-margin-top: 2rem;
+  }
 }
 
-* { box-sizing: border-box; }
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-10;
+  }
 
-html { scroll-behavior: smooth; }
+  .section-space {
+    @apply py-14 sm:py-20;
+  }
 
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+  .section-heading {
+    @apply mb-10 space-y-5;
+  }
 
-::selection { background: #000; color: #fff; }
+  .section-heading h2 {
+    @apply max-w-2xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl;
+  }
 
-.font-editorial { font-family: Georgia, 'Times New Roman', serif; }
+  .eyebrow {
+    @apply flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em];
+  }
 
-.paper-grain { background: #fff; }
+  .text-link {
+    @apply underline underline-offset-4 hover:decoration-2;
+  }
 
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: #000;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.eyebrow::before { width: 1.8rem; height: 1px; background: currentColor; content: ''; }
-
-.rule { border-color: #000; }
-
-.brain-stroke {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+  .nav-link {
+    @apply py-2 hover:underline hover:underline-offset-4;
   }
 }

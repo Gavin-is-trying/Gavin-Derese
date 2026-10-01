@@ -1,18 +1,34 @@
-'use client'
+import Hexagon from './Hexagon'
 
-import { motion } from 'framer-motion'
-
-const areas = [
-  { number: 'I', title: 'Craft', detail: 'The disciplines that turn care into capability.', examples: 'Design · Writing · Analysis' },
-  { number: 'II', title: 'Curiosity', detail: 'The pursuits that keep the mind porous and awake.', examples: 'Reading · Cooking · Photography' },
-  { number: 'III', title: 'Vitality', detail: 'The conditions that make a sustainable life possible.', examples: 'Movement · Rest · Connection' },
+const principles = [
+  ['Be direct.', 'Clear scope, honest advice, and useful answers. Say what is known and what still needs to be checked.'],
+  ['Start small.', 'Use the simplest workable solution. Add another tool only when it solves a real problem.'],
+  ['Measure the work.', 'Separate a good idea from a finished result. Choose a concrete next step and a way to check it.'],
 ]
 
 export default function SkillsGrid() {
   return (
-    <section id="areas" className="bg-black px-6 py-24 text-white md:px-12 lg:px-16">
-      <div className="mx-auto max-w-7xl"><div className="flex flex-col justify-between gap-8 border-b border-white pb-12 md:flex-row md:items-end"><div><p className="eyebrow !text-white">Areas of focus</p><h2 className="font-editorial mt-6 text-4xl tracking-[-0.03em] sm:text-5xl">A life has many rooms.</h2></div><p className="max-w-sm text-sm leading-6 text-white">The practice is broad enough to hold work, wonder, and wellbeing without mistaking any one for the whole.</p></div>
-        <div className="grid md:grid-cols-3">{areas.map((area, index) => (<motion.article key={area.title} initial={{ y: 18 }} whileInView={{ y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.1 }} className="min-h-72 border-b border-white py-10 md:border-b-0 md:px-8 md:first:pl-0 md:not(:last-child):border-r md:last:pr-0"><span className="font-editorial text-2xl text-white">{area.number}</span><h3 className="font-editorial mt-12 text-3xl">{area.title}</h3><p className="mt-4 max-w-xs leading-7 text-white">{area.detail}</p><p className="mt-7 text-xs font-bold uppercase tracking-[0.13em] text-white">{area.examples}</p></motion.article>))}</div>
+    <section id="approach" aria-labelledby="approach-heading" className="site-container section-space">
+      <div className="section-heading">
+        <p className="eyebrow"><Hexagon />03 / Approach</p>
+        <h2 id="approach-heading">Keep it straightforward.</h2>
+      </div>
+      <div className="grid gap-8 md:grid-cols-3">
+        {principles.map(([title, description]) => (
+          <article key={title} className="border-t border-black pt-6">
+            <h3 className="text-xl font-medium tracking-tight">{title}</h3>
+            <p className="mt-4 leading-7">{description}</p>
+          </article>
+        ))}
+      </div>
+      <div className="mt-14 grid gap-6 border-t border-black pt-8 sm:grid-cols-[1fr_2fr]">
+        <h3 className="text-xl font-medium tracking-tight">Beyond the business</h3>
+        <p className="max-w-2xl leading-7">
+          Strength training, running, and basketball keep me moving. Robotic
+          mowing and local AI keep me curious. Across both, I’m interested in
+          practical capability: getting better at the work, not just collecting
+          more tools.
+        </p>
       </div>
     </section>
   )

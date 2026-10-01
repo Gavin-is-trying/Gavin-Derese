@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gavinderese.com'),
-  title: 'Gavin Derese — A life in practice',
-  description: 'A considered system for cultivating skills, interests, and a life well lived.',
+  title: 'Gavin Derese — Work & Systems',
+  description: 'Kerrville, Texas. The Lawn Company, VIVATION, and an interest in practical AI, useful systems, and straightforward work.',
   alternates: {
     canonical: '/',
   },

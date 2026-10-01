@@ -1,46 +1,32 @@
-# Gavin-Derese
+# Gavin Derese
 
-Gavin Derese by Gavin Derese featuring Gavin Derese 
+Personal website at https://gavinderese.com: The Lawn Company, VIVATION, practical AI project directions, and working principles.
 
-I'm creating a sneaky Sasquatch IRL for the different skills, hobbies, and aspiration goals in my life. I'm going to try and gamify my life, see what effect it has, if it is useful or not, and how much I need to bring in other data streams. I think that will be the bottleneck. 
+## Development
 
-AWS costs have come down 30% since we also want to gamify GavinDerese.com. I would like to create animated characters, even in the style of the early 1970s Dr. Seuss animated cartoons.
+Requires Node.js 20+ and npm.
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 20+
-- npm or yarn
-
-### Installation
-```bash
-npm install
-```
-
-### Development
-```bash
+```sh
+npm ci
 npm run dev
 ```
-Open http://localhost:3000
 
-### Build
-```bash
+Open http://localhost:3000.
+
+## Production
+
+```sh
 npm run build
 npm start
 ```
 
-### Deployment
-Deploy through Vercel and configure `gavinderese.com` as the production domain in the Vercel project settings.
+Deploy through Vercel with `gavinderese.com` configured in the project’s domain settings.
 
-## 🎨 Design Philosophy
-Inspired by 1970s Dr. Seuss animated cartoons with a modern gamification twist.
+## Design and content
 
-## 🌐 Live Site
-https://gavinderese.com
+- Black and white only; no gradients, translucent colors, or animations.
+- Helvetica Neue / Helvetica, with Arial and sans-serif fallbacks when unavailable locally.
+- Minimal outlined hexagons, thin rules, and responsive text-first layouts.
+- Server-rendered sections built with Next.js, React, TypeScript, and Tailwind CSS.
 
-## 🛠️ Technologies Used
-- Next.js 14.2
-- React 18.3
-- TypeScript
-- Tailwind CSS
-- Framer Motion 
+Copy is curated from `GAVIN_MASTER_CONTEXT.md` (October 1, 2026 snapshot). That document is a private reference and is not bundled with or published by this website. Keep financial records, family details, health history, account information, and raw source material out of public copy. Describe planned systems as intentions, not as shipped products or verified integrations.

@@ -6,12 +6,15 @@ import SkillsGrid from '../components/SkillsGrid'
 
 export default function Home() {
   return (
-    <main className="paper-grain overflow-hidden">
+    <>
+      <a href="#main" className="sr-only focus:not-sr-only focus:inline-block focus:bg-white focus:p-4 focus:text-black">Skip to content</a>
       <Hero />
-      <GameifySection />
-      <CharacterPreview />
-      <SkillsGrid />
+      <main id="main" tabIndex={-1}>
+        <GameifySection />
+        <CharacterPreview />
+        <SkillsGrid />
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
