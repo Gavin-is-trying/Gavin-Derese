@@ -8,11 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: '#f4f0e8',
-        ink: '#1e2926',
-        moss: '#354b40',
-        oxblood: '#6f332c',
-        gold: '#b08a46',
+        paper: '#fff',
+        ink: '#000',
       },
     },
   },
